@@ -1,19 +1,11 @@
-## Using hashicorp
-
-make local-vault
-
-#### Basic commands
-
-make info-vault
-
-vault operator unseal
-
 ### Demo steps
+
+0- minikube start
 
 1- Create a Kubernetes Service Account
 
 ```
-kubectl apply -f vault-auth-sa
+kubectl apply -f app-vault/vault-auth-sa
 
 kubectl get sa vault-auth -o yaml
 
@@ -39,3 +31,13 @@ kubectl get sa vault-auth -o jsonpath="{.secrets[\*]['name']}"
 `kubectl port-forward pod/vault-agent-example 8080:80`
 
 `kubectl exec -it vault-agent-example sh`
+
+## Validate
+
+vault kv get secret/myapp/config
+
+## Resources
+
+- https://medium.com/@maxy_ermayank/credential-store-using-hashicorp-vault-7d2fdeed08f2
+- https://github.com/hashicorp/vault-guides/tree/master/identity/vault-agent-k8s-demo
+- https://www.youtube.com/watch?v=B16YTeSs1hI&t=1707s

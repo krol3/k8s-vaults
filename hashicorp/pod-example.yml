@@ -47,7 +47,7 @@ spec:
         [
           "agent",
           "-config=/etc/vault/vault-agent-config.hcl",
-          #"-log-level=debug",
+          "-log-level=debug",
         ]
 
   containers:
@@ -77,7 +77,7 @@ spec:
       args:
         [
           "-config=/etc/consul-template/consul-template-config.hcl",
-          #"-log-level=debug",
+          "-log-level=debug",
         ]
 
     # Nginx container
