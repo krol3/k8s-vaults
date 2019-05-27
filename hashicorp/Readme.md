@@ -38,6 +38,6 @@ vault kv get secret/myapp/config
 
 ## Resources
 
-- https://medium.com/@maxy_ermayank/credential-store-using-hashicorp-vault-7d2fdeed08f2
-- https://github.com/hashicorp/vault-guides/tree/master/identity/vault-agent-k8s-demo
-- https://www.youtube.com/watch?v=B16YTeSs1hI&t=1707s
+- [Credential Store using HashiCorp Vault](https://medium.com/@maxy_ermayank/credential-store-using-hashicorp-vault-7d2fdeed08f2)
+- [hashicorp vault demo](https://github.com/hashicorp/vault-guides/tree/master/identity/vault-agent-k8s-demo)
+- [Using HashiCorp Vault with Kubernetes (Cloud Next '18)](https://www.youtube.com/watch?v=B16YTeSs1hI&t=1707s)
