@@ -5,7 +5,7 @@ help:
 	@echo  "help:              Instructions "
 
 install-consul:
-	helm install --namespace consul --name my-consul -f consul/values.yaml stable/consul
+	helm install --namespace vault --name my-consul -f consul/values.yaml stable/consul
 
 local-consul:
 	kubectl port-forward service/my-consul 8500
@@ -17,8 +17,8 @@ install-vault:
 upgrade-vault:
 	helm upgrade vault-v1 -f vault/values.yml incubator/vault
 
-install-mariadb:
-	helm install --namespace mariadb --name mdb-v1 --set rootUser.password=secretpassword,db.user=app_db stable/mariadb
+install-mysql:
+	helm install --namespace mysql --name mdb-v1 --set mysqlRootPassword=secretpassword,mysqlUser=my-user,mysqlPassword=my-password,mysqlDatabase=vault_db stable/mysql
 
 local-vault:
 	vault server -dev -dev-listen-address=0.0.0.0:8200 & http://localhost:8200/ui/vault/secrets

@@ -5,7 +5,7 @@
 1- Create a Kubernetes Service Account
 
 ```
-kubectl apply -f app-vault/vault-auth-sa
+kubectl apply -f app-vault/vault-auth-sa.yml
 
 kubectl get sa vault-auth -o yaml
 
