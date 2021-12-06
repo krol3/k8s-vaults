@@ -5,7 +5,8 @@ help:
 	@echo  "help:              Instructions "
 
 install-consul:
-	helm install --namespace vault --name my-consul -f consul/values.yaml stable/consul
+	helm install --namespace vault --name consul -f consul/values.yaml stable/consul
+	helm install --namespace vault --name consul stable/consul
 
 local-consul:
 	kubectl port-forward service/my-consul 8500
